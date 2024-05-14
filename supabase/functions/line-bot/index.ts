@@ -21,8 +21,12 @@ Deno.serve(async (req) => {
     if(input === "Display"){
       const items = await List.fetchAll(supabaseClient());
       
-      items.length == 0 ?? output = "nothing in the list" : output = items.map((item) => item.item).join('\n');
+      if(items.length == 0){
+        output = "nothing in the list"
+      } else {
+        output = items.map((item) => item.item).join('\n');
       }
+    
     } else  if(input === "Deleteall") {
       await List.deleteAll(supabaseClient());
      
