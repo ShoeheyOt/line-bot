@@ -1,16 +1,62 @@
-/// <reference types="https://esm.sh/@supabase/functions-js/src/edge-runtime.d.ts" />
+import List from "./list.ts"
+import { supabaseClient } from "./supabase.ts"
+
 
 Deno.serve(async (req) => {
   const { events } = await req.json();
 
   if(events && events[0]?.type === 'message'){
     
+    const input = events[0].message.text;
+    
+    let output = ""
+    
+    // switch(input){
+    //   case "Display":
+    //     break;
+    //   case "DeleteAll":
+    //     break;
+    //   case ""
+    // }
+    if(input === "Display"){
+      const items = await List.fetchAll(supabaseClient());
+      console.log("items.length",items.length)
+      if (items.length == 0 ){
+        output = "nothing in the list"
+      } else{
+        output = items.map((item) => item.item).join('\n');
+      }
+    } else  if(input === "Deleteall") {
+      await List.deleteAll(supabaseClient());
+     
+      output = "successfully delete all";
+    } else if(input.startsWith("Delete ")){
+      const strings = input.split(" ");
+     
+      const item = strings[1];
+     
+      await List.deleteOne(item,supabaseClient());
+     
+      output = `successfully delete ${item}`;
+    } else{
+      const newItem = new List(input);
+      
+      await newItem.save(supabaseClient());
+      
+      output = `Successfully add ${input}!`;
+    }
+    
+    
+
+
+
     let messages = [
       {
         type: 'text',
-        text: `reply to ${events[0].message.text}`,
+        text: output,
       }
     ];
+    
 
     const dataString = JSON.stringify({
       replyToken:events[0].replyToken,
