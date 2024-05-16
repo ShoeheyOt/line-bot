@@ -11,13 +11,6 @@ Deno.serve(async (req) => {
     
     let output = ""
     
-    // switch(input){
-    //   case "Display":
-    //     break;
-    //   case "DeleteAll":
-    //     break;
-    //   case ""
-    // }
     if(input === "Display"){
       const items = await List.fetchAll(supabaseClient());
       
@@ -27,7 +20,7 @@ Deno.serve(async (req) => {
         output = items.map((item) => item.item).join('\n');
       }
     
-    } else  if(input === "Deleteall") {
+    } else  if(input === "Clear") {
       await List.deleteAll(supabaseClient());
      
       output = "successfully delete all";
