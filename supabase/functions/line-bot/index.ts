@@ -39,10 +39,6 @@ Deno.serve(async (req) => {
       
       output = `Successfully add ${input}!`;
     }
-    
-    
-
-
 
     let messages = [
       {
@@ -50,7 +46,6 @@ Deno.serve(async (req) => {
         text: output,
       }
     ];
-    
 
     const dataString = JSON.stringify({
       replyToken:events[0].replyToken,
