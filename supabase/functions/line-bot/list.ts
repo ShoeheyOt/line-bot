@@ -23,6 +23,7 @@ export default class List {
     }
    
     static async deleteAll(supabaseClient){
+        
         // const {error} = await supabaseClient.from("shoppingList").delete().eq("*","*");
         // if(error){
         //     console.log("Error while deleting", error.message)
@@ -35,6 +36,7 @@ export default class List {
         if(error){
             console.error("error fetching items", error.message);
         }
+        //need to delete one by one 
         if(data && data.length > 0) {
             for(const item of data) {
                 await supabaseClient.from("shoppingList").delete().eq("id", item.id)
