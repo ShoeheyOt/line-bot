@@ -24,14 +24,6 @@ export default class List {
    
     static async deleteAll(supabaseClient){
         
-        // const {error} = await supabaseClient.from("shoppingList").delete().eq("*","*");
-        // if(error){
-        //     console.log("Error while deleting", error.message)
-        // } else {
-        //     console.log("successfully deleted all items")
-        // }
-
-
         const {data,error} = await supabaseClient.from("shoppingList").select("*")
         if(error){
             console.error("error fetching items", error.message);
