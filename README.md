@@ -23,6 +23,7 @@ To view all items currently on your shopping list, type "Display" and send the m
 ![Alt text](public/Photos-001/Display-Cropped.svg "Read")
 
 </div>
+
 ### Delete
 
 There are two ways to remove items from your shopping list:
