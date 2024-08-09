@@ -8,7 +8,8 @@ Deno.serve(async (req) => {
   if(events && events[0]?.type === 'message'){
     
     const input = events[0].message.text;
-    
+
+   //set variable  
     let output = ""
     
     if(input === "Display"){
