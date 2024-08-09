@@ -44,6 +44,12 @@ There are two ways to remove items from your shopping list:
 
 </div>
 
+<div align="center">
+
+### [Demo Link to Youtube](https://youtube.com/shorts/NrnrAvvU2m4)
+
+</div>
+
 ## Utilize Line Feature
 
 For ease of use, the app leverages LINE's "Rich Menu" feature, allowing users to quickly access common commands like "Display" and "Clear" with a single tap. This integration enhances the user experience by making the app more intuitive and efficient.
