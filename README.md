@@ -8,16 +8,40 @@ The Shopping List application is designed to simplify the task of remembering wh
 
 To add a new item to the list, simply type the name of the item you wish to remember and send it through the LINE messaging platform. This action will automatically add the item to your shopping list without requiring any additional commands.
 
+<div align="center">
+
+![Alt text](public/Photos-001/Add-Croped.svg "create")
+
+</div>
+
 ### Read
 
 To view all items currently on your shopping list, type "Display" and send the message. The app will respond with a list of all items stored in the database.
 
+<div align="center">
+
+![Alt text](public/Photos-001/Display-Cropped.svg "Read")
+
+</div>
 ### Delete
 
 There are two ways to remove items from your shopping list:
 
 - Specific Item Deletion: Type "Delete" followed by the name of the item you wish to remove. This command will delete the specified item from your list.
+
+<div align="center">
+
+![Alt text](public/Photos-001/Delete-Cropped.svg "Delete one")
+
+</div>
+
 - Clear List: To remove all items from your shopping list, type "Clear" and send the message. This will clear the entire list, leaving it empty for future additions.
+
+<div align="center">
+
+![Alt text](public/Photos-001/Clear-Cropped.svg "Delete All")
+
+</div>
 
 ## Utilize Line Feature
 
