@@ -46,7 +46,7 @@ There are two ways to remove items from your shopping list:
 
 <div align="center">
 
-### [Demo Link to Youtube](https://youtube.com/shorts/NrnrAvvU2m4)
+### <ins>[Demo Link to Youtube](https://youtube.com/shorts/NrnrAvvU2m4) </ins>
 
 </div>
 
